@@ -35,6 +35,7 @@ app.get('/', function (req, res) {
 
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
+    console.log(`Your API key is ${api_data.API_key}`);
 })
 
 //GET route that returns the projectData

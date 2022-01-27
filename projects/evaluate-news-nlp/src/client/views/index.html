@@ -2,23 +2,23 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
+        <title>Natural Language Processing</title>
         <script>
             // Check that service workers are supported
             if ('serviceWorker' in navigator) {
-                // Use the window load event to keep the page load performant
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js');
-                });
+              // Use the window load event to keep the page load performant
+              window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+              });
             }
-           </script>
+        </script>
     </head>
 
     <body>
 
         <header>
-            <div class="">
-                Logo
+            <div class="title">
+                <h1>Natural Language Processing</h1>
             </div>
             <div class="">
                 navigation
@@ -28,14 +28,16 @@
         <main>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
+                    <input id="website" type="text" name="input" value="" placeholder="Page address which you want to run through NLP">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             </section>
 
             <section>
                 <strong>Form Results:</strong>
-                <div id="results"></div>
+                <div>
+                    <textarea readonly id="results"></textarea>
+                </div>
             </section>
         </main>
 
